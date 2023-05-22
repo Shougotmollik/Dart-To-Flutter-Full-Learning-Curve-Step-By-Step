@@ -41,10 +41,10 @@ In Dart, you can declare variables using the `var` keyword or by specifying thei
             ```
 Variables can be assigned values and their types can be changed dynamically using the `var` keyword.
 
-**Loops:**
-Dart provides several loop constructs:
+    **Loops:**
+    Dart provides several loop constructs:
 
-1. **For loop:** Executes a block of code a specific number of times, typically iterating over a range of values.
+    1. **For loop:** Executes a block of code a specific number of times, typically iterating over a range of values.
                 ```dart
                 for (var i = 0; i < 5; i++) {
                 print(i);
