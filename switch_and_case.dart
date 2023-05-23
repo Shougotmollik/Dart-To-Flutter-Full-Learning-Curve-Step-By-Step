@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 void main() {
   String grade = "A";
 
