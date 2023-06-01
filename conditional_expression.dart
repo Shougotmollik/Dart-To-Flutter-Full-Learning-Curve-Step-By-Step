@@ -22,7 +22,7 @@ void main() {
 // If exp1 is non-null,returns its value ;
 //Other wise Evalutes and returns the value of exp2.
 
-  String name = "Shougot mollik";
-  String NameToPrint = name ?? "Guest User ";
-  print(NameToPrint);
+  // String name = "Shougot mollik";
+  // String NameToPrint = name ?? "Guest User ";
+  // print(NameToPrint);
 }
