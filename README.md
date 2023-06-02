@@ -1,3 +1,4 @@
+![image](https://github.com/Shougotmollik/dart_full_bootcamp-zero_to_advance-/assets/113712457/9b491aa5-c47d-41f4-9e09-5ef0436c6a92)
 
 Dart is a programming language developed by Google and released in 2011. It was designed to be a versatile and efficient language for building web, mobile, and desktop applications. Dart is an object-oriented language with a syntax that is similar to other popular languages such as C++, Java, and JavaScript, making it relatively easy to learn for developers familiar with those languages.
 
@@ -40,16 +41,12 @@ In Dart, you can declare variables using the `var` keyword or by specifying thei
             int height = 180; // explicit type declaration
             ```
 Variables can be assigned values and their types can be changed dynamically using the `var` keyword.
-
-    **Loops:**
-    Dart provides several loop constructs:
-
-    1. **For loop:** Executes a block of code a specific number of times, typically iterating over a range of values.
-                ```dart
+**Loops:**
+ Dart provides several loop constructs:
+1. **For loop:** Executes a block of code a specific number of times, typically iterating over a range of values.
+                            ```dart --> -->
                 for (var i = 0; i < 5; i++) {
                 print(i);
-                }
-```
 
 2. **While loop:** Repeats a block of code as long as a given condition is true.
                 ```dart
