@@ -40,16 +40,12 @@ In Dart, you can declare variables using the `var` keyword or by specifying thei
             int height = 180; // explicit type declaration
             ```
 Variables can be assigned values and their types can be changed dynamically using the `var` keyword.
-
-    **Loops:**
-    Dart provides several loop constructs:
-
-    1. **For loop:** Executes a block of code a specific number of times, typically iterating over a range of values.
-                ```dart
+**Loops:**
+ Dart provides several loop constructs:
+1. **For loop:** Executes a block of code a specific number of times, typically iterating over a range of values.
+                            ```dart --> -->
                 for (var i = 0; i < 5; i++) {
                 print(i);
-                }
-```
 
 2. **While loop:** Repeats a block of code as long as a given condition is true.
                 ```dart
