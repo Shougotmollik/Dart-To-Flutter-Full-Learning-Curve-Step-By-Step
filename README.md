@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ![image](https://github.com/Shougotmollik/dart_full_bootcamp-zero_to_advance-/assets/113712457/9b491aa5-c47d-41f4-9e09-5ef0436c6a92)
 
 Dart is a programming language developed by Google and released in 2011. It was designed to be a versatile and efficient language for building web, mobile, and desktop applications. Dart is an object-oriented language with a syntax that is similar to other popular languages such as C++, Java, and JavaScript, making it relatively easy to learn for developers familiar with those languages.
@@ -140,3 +141,6 @@ Dart allows you to use polymorphism, where objects of different classes can be t
 These concepts form the foundation of object-oriented programming in Dart, enabling code organization, reusability, and abstraction.
 
 This is a brief overview of the Dart. Dart is a versatile language that offers many more features and capabilities beyond what's covered here.
+=======
+# Dart-To-Flutter-Full-Learning-Curve-Step-By-Step
+>>>>>>> refs/remotes/origin/main
