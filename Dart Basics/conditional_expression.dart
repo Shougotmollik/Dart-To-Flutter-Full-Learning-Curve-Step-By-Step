@@ -14,6 +14,7 @@ void main() {
     print("The smaller number is $num1");
   }
 
+
   num1 > num2
       ? print("The smaller number is $num2")
       : print("The smaller number is $num1");
