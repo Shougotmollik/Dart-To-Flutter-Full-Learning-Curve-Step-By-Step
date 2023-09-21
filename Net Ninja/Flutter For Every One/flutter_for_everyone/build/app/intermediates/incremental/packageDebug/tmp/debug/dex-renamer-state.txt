@@ -1,0 +1,4 @@
+#Tue Sep 19 22:15:29 BDT 2023
+base.0=/home/shell/MySpace/Codes/Dart-To-Flutter-Full-Learning-Curve-Step-By-Step/Net Ninja/Flutter For Every One/flutter_for_everyone/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
