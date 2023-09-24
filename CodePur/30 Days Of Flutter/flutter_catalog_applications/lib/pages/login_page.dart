@@ -12,15 +12,17 @@ class _LoginPageState extends State<LoginPage> {
   String name = "";
   bool changeButton = false;
   final _formKey = GlobalKey<FormState>();
-  moveToHome(BuildContext context) async {
-    setState(() {
-      changeButton = true;
-    });
-    await Future.delayed(Duration(seconds: 1));
-    await Navigator.pushNamed(context, MyRoutes.homeRoute);
-    setState(() {
-      changeButton = false;
-    });
+  moveToHome(BuildContext context) async { 
+    if (_formKey.currentState!.validate()) {
+      setState(() {
+        changeButton = true;
+      });
+      await Future.delayed(Duration(seconds: 1));
+      await Navigator.pushNamed(context, MyRoutes.homeRoute);
+      setState(() {
+        changeButton = false;
+      });
+    }
   }
 
   @override
@@ -56,6 +58,12 @@ class _LoginPageState extends State<LoginPage> {
                           hintText: "Enter username",
                           labelText: "Username",
                         ),
+                        validator: (value) {
+                          if (value!.isEmpty) {
+                            return "Username cannot be empty";
+                          }
+                          return null;
+                        },
                         onChanged: (value) {
                           name = value;
                           setState(() {});
@@ -67,6 +75,14 @@ class _LoginPageState extends State<LoginPage> {
                           hintText: "Enter password",
                           labelText: "Password",
                         ),
+                        validator: (value) {
+                          if (value!.isEmpty) {
+                            return "PassWord cannot be empty";
+                          } else if (value.length < 8) {
+                            return "Password must be 8 character";
+                          }
+                          return null;
+                        },
                       ),
                       SizedBox(
                         height: 40.0,
