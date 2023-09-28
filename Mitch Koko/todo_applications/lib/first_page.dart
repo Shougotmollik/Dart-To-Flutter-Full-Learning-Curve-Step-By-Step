@@ -1,7 +1,6 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:todo_applications/second_page.dart';
 
 class FirstPage extends StatelessWidget {
   const FirstPage({super.key});
