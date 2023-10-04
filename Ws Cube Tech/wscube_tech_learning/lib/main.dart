@@ -1,31 +1,39 @@
+// ignore_for_file: prefer_const_constructors, camel_case_types
+
 import 'package:flutter/material.dart';
 
 void main(List<String> args) {
-  runApp(const myApp());
+  runApp(const MyApp());
 }
 
-class myApp extends StatelessWidget {
-  const myApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        backgroundColor: Colors.yellow[200],
         appBar: AppBar(
-          title: Text("WsCube Tech Flutter Basics"),
+          title: Text("WsCube Tech Flutter Basics",
+              style: TextStyle(color: Colors.black54)),
           centerTitle: true,
           elevation: 0.0,
-          backgroundColor: Colors.deepPurple,
+          backgroundColor: Colors.yellow[600],
         ),
         body: Center(
           child: Container(
-            height: 200,
-            width: 200,
+            height: 300,
+            width: 300,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(12),
-              color: Colors.deepPurpleAccent[200],
-            ),
+                color: Colors.amber[400],
+                borderRadius: BorderRadius.circular(20)),
+            child: Center(
+                child: Text(
+              "Hello This is text example",
+              style: TextStyle(fontSize: 24, fontStyle: FontStyle.italic),
+            )),
           ),
         ),
       ),
