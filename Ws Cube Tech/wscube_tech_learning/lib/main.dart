@@ -11,7 +11,24 @@ class myApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(),
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("WsCube Tech Flutter Basics"),
+          centerTitle: true,
+          elevation: 0.0,
+          backgroundColor: Colors.deepPurple,
+        ),
+        body: Center(
+          child: Container(
+            height: 200,
+            width: 200,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(12),
+              color: Colors.deepPurpleAccent[200],
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
