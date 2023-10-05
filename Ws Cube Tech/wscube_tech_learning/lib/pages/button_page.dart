@@ -1,35 +1,24 @@
 // ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers
 
 import 'package:flutter/material.dart';
-import 'package:wscube_tech_learning/pages/home_page.dart';
+import 'package:wscube_tech_learning/utils/routes.dart';
 
-class ButtonPage extends StatefulWidget {
+class ButtonPage extends StatelessWidget {
   const ButtonPage({super.key});
 
   @override
-  State<ButtonPage> createState() => _ButtonPageState();
-}
-
-class _ButtonPageState extends State<ButtonPage> {
-  final onChanged = HomePage();
-  @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("button"),
-        ),
-        body: Container(
-            child: Center(
+    return Scaffold(
+      backgroundColor: Colors.yellow[200],
+      body: Center(
+        child: Container(
           child: ElevatedButton(
-            child: Text("Click for Home page"),
+            child: Text("Click Here"),
             onPressed: () {
-              onChanged;
-              setState(() {});
+              Navigator.pushNamed(context, MyRoutes.HomeRoute);
             },
           ),
-        )),
+        ),
       ),
     );
   }
