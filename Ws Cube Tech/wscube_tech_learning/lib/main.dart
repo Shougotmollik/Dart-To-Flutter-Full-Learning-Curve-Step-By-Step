@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:wscube_tech_learning/pages/button_page.dart';
 import 'package:wscube_tech_learning/pages/home_page.dart';
+import 'package:wscube_tech_learning/utils/routes.dart';
 
 void main(List<String> args) {
   runApp(const MyApp());
@@ -15,8 +16,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      themeMode: ThemeMode.light,
       theme: ThemeData(primarySwatch: Colors.yellow),
-      home: ButtonPage(),
+      routes: {
+        MyRoutes.HomeRoute: (context) => HomePage(),
+        MyRoutes.ButtonRoute: (context) => ButtonPage(),
+      },
     );
   }
 }
