@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:wscube_tech_learning/pages/button_page.dart';
 import 'package:wscube_tech_learning/pages/home_page.dart';
+import 'package:wscube_tech_learning/pages/image_page.dart';
 import 'package:wscube_tech_learning/utils/routes.dart';
 
 void main(List<String> args) {
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
       routes: {
         MyRoutes.HomeRoute: (context) => HomePage(),
         MyRoutes.ButtonRoute: (context) => ButtonPage(),
+        MyRoutes.ImageRoute: (context) => ImagePage(),
       },
     );
   }
