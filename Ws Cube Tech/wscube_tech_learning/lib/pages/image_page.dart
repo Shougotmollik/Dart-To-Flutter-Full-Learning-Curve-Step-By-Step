@@ -15,6 +15,7 @@ class ImagePage extends StatelessWidget {
       drawer: Drawer(
         child: Text("This is drawer "),
         backgroundColor: Colors.amber[200],
+        elevation: 0.0,
       ),
     );
   }
