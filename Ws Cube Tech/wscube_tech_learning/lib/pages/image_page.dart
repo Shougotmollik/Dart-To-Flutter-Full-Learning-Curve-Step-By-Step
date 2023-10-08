@@ -8,6 +8,11 @@ class ImagePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Image picker"),
+        elevation: 0.0,
+        centerTitle: true,
+      ),
       backgroundColor: Colors.yellow[200],
       // !this bug needed to solve
       body: Center(child: Image.asset('assets/images/shougot.jpeg')),
