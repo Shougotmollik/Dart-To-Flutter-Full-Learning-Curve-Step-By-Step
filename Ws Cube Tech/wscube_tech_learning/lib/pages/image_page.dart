@@ -11,12 +11,6 @@ class ImagePage extends StatelessWidget {
       backgroundColor: Colors.yellow[200],
       // !this bug needed to solve
       body: Center(child: Image.asset('assets/images/shougot.jpeg')),
-
-      drawer: Drawer(
-        child: Text("This is drawer "),
-        backgroundColor: Colors.amber[200],
-        elevation: 0.0,
-      ),
     );
   }
 }
