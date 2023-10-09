@@ -17,7 +17,26 @@ class HomePage extends StatelessWidget {
         backgroundColor: Colors.yellow[600],
       ),
       body: Center(
-        child: Container(),
+        child: InkWell(
+          onTap: () {
+            print("Clicked on container");
+          },
+          child: Container(
+            height: 200,
+            width: 200,
+            decoration: BoxDecoration(
+                color: Colors.amberAccent,
+                borderRadius: BorderRadius.circular(20)),
+            child: Center(
+                child: Text(
+              "Click Here!!!",
+              style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w400,
+                  fontStyle: FontStyle.italic),
+            )),
+          ),
+        ),
       ),
     );
   }
