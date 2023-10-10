@@ -7,6 +7,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var animal = ["Cat", "Dog", "Cow", "Rat", "Horse", "Donkey"];
     return Scaffold(
         backgroundColor: Colors.yellow[200],
         appBar: AppBar(
@@ -16,47 +17,11 @@ class HomePage extends StatelessWidget {
           elevation: 0.0,
           backgroundColor: Colors.yellow[600],
         ),
-        body: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                Container(
-                  margin: EdgeInsets.only(top: 12),
-                  height: 200,
-                  color: Colors.green,
-                ),
-                Container(
-                  height: 200,
-                  color: Colors.orange,
-                ),
-                Container(
-                  height: 200,
-                  color: Colors.deepPurple,
-                ),
-                Container(
-                  height: 200,
-                  color: Colors.white,
-                ),
-                Container(
-                  height: 200,
-                  color: Colors.redAccent,
-                ),
-                Container(
-                  height: 200,
-                  color: Colors.blueAccent,
-                ),
-                Container(
-                  height: 200,
-                  color: Colors.pink,
-                ),
-                Container(
-                  height: 200,
-                  color: Colors.black,
-                ),
-              ],
-            ),
-          ),
+        body: ListView.builder(
+          itemBuilder: (context, index) {
+            return Text(animal[index]);
+          },
+          itemCount: animal.length,
         ));
   }
 }
