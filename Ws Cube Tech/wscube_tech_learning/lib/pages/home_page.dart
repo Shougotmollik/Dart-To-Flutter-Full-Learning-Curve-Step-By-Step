@@ -7,7 +7,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var animal = ["Cat", "Dog", "Cow", "Rat", "Horse", "Donkey"];
+    var animal = ["Cat", "Dog", "Cow", "Horse", "Donkey"];
     return Scaffold(
         backgroundColor: Colors.yellow[200],
         appBar: AppBar(
