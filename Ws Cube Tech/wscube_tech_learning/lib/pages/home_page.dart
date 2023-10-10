@@ -19,7 +19,13 @@ class HomePage extends StatelessWidget {
         ),
         body: ListView.builder(
           itemBuilder: (context, index) {
-            return Text(animal[index]);
+            return Text(
+              animal[index],
+              style: TextStyle(
+                  fontSize: 24,
+                  fontStyle: FontStyle.italic,
+                  fontWeight: FontWeight.w400),
+            );
           },
           itemCount: animal.length,
         ));
