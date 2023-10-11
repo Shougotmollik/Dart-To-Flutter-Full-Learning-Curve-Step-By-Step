@@ -7,7 +7,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var animal = ["Cat", "Dog", "Cow", "Horse", "Donkey", "Rat"];
+    var animal = ["Cat", "Dog", "Cow", "Horse", "Donkey", "Rat", "Rabbit"];
     return Scaffold(
         backgroundColor: Colors.yellow[200],
         appBar: AppBar(
@@ -19,12 +19,11 @@ class HomePage extends StatelessWidget {
         ),
         body: ListView.separated(
           itemBuilder: (context, index) {
-            return Text(
-              animal[index],
-              style: TextStyle(
-                  fontSize: 24,
-                  fontStyle: FontStyle.italic,
-                  fontWeight: FontWeight.w400),
+            return ListTile(
+              leading: Text("$index"),
+              title: Text(animal[index]),
+              subtitle: Text("number"),
+              trailing: Icon(Icons.person),
             );
           },
           itemCount: animal.length,
