@@ -23,7 +23,7 @@ class HomePage extends StatelessWidget {
               leading: Text("$index"),
               title: Text(animal[index]),
               subtitle: Text("number"),
-              trailing: Icon(Icons.person),
+              trailing: Icon(Icons.data_object),
             );
           },
           itemCount: animal.length,
