@@ -7,7 +7,6 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var animal = ["Cat", "Dog", "Cow", "Horse", "Donkey", "Rat", "Rabbit"];
     return Scaffold(
         backgroundColor: Colors.yellow[200],
         appBar: AppBar(
@@ -17,23 +16,10 @@ class HomePage extends StatelessWidget {
           elevation: 0.0,
           backgroundColor: Colors.yellow[600],
         ),
-        body: ListView.separated(
-          itemBuilder: (context, index) {
-            return ListTile(
-              leading: Text("$index"),
-              title: Text(animal[index]),
-              subtitle: Text("number"),
-              trailing: Icon(Icons.data_object),
-            );
-          },
-          itemCount: animal.length,
-          separatorBuilder: (context, index) {
-            return Divider(
-              height: 100,
-              thickness: 5,
-              color: Colors.lightGreenAccent,
-            );
-          },
+        body: Center(
+          child: CircleAvatar(
+            backgroundImage: AssetImage("assets/images/boy.jpg"),
+          ),
         ));
   }
 }
