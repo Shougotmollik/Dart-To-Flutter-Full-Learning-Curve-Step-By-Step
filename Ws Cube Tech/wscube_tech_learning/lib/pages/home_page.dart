@@ -19,7 +19,7 @@ class HomePage extends StatelessWidget {
         body: Center(
           child: CircleAvatar(
             child: Container(
-              height: 60,
+              height: 70,
               width: 60,
               child: Column(
                 children: [
