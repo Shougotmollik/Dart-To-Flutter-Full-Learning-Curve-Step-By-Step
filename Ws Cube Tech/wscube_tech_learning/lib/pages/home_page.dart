@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers, sized_box_for_whitespace, sort_child_properties_last
 
 import 'package:flutter/material.dart';
 
@@ -18,7 +18,21 @@ class HomePage extends StatelessWidget {
         ),
         body: Center(
           child: CircleAvatar(
-            backgroundImage: AssetImage("assets/images/boy.jpg"),
+            child: Container(
+              height: 60,
+              width: 60,
+              child: Column(
+                children: [
+                  Container(
+                      height: 40,
+                      width: 40,
+                      child: Image.asset("assets/images/boy.jpg")),
+                  Text("Name"),
+                ],
+              ),
+            ),
+            backgroundColor: Colors.blueAccent,
+            radius: 45,
           ),
         ));
   }
