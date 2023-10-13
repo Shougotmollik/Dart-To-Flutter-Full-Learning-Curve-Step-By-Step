@@ -32,7 +32,7 @@ class HomePage extends StatelessWidget {
               ),
             ),
             backgroundColor: Colors.blueAccent,
-            radius: 45,
+            radius: 50,
           ),
         ));
   }
