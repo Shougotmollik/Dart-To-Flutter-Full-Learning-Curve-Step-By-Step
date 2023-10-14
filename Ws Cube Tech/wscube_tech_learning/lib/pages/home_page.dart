@@ -32,6 +32,7 @@ class HomePage extends StatelessWidget {
                     Icons.email_rounded,
                     size: 50,
                     color: Colors.redAccent,
+                    weight: 75,
                   )
                 ],
               ),
