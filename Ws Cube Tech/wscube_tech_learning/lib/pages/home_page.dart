@@ -28,7 +28,11 @@ class HomePage extends StatelessWidget {
                       width: 100,
                       child: Image.asset("assets/images/boy.jpg")),
                   Text("Name"),
-                  Icon(Icons.email_rounded,)
+                  Icon(
+                    Icons.email_rounded,
+                    size: 50,
+                    color: Colors.redAccent,
+                  )
                 ],
               ),
             ),
