@@ -28,11 +28,16 @@ class HomePage extends StatelessWidget {
                       width: 100,
                       child: Image.asset("assets/images/boy.jpg")),
                   Text("Name"),
-                  Icon(
-                    Icons.email_rounded,
-                    size: 50,
-                    color: Colors.redAccent,
-                    weight: 75,
+                  InkWell(
+                    onDoubleTap: () {
+                      print("Tapped on email");
+                    },
+                    child: Icon(
+                      Icons.email_rounded,
+                      size: 50,
+                      color: Colors.redAccent,
+                      weight: 75,
+                    ),
                   )
                 ],
               ),
