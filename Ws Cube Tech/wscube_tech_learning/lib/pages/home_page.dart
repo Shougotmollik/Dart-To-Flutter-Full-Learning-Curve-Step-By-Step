@@ -19,15 +19,16 @@ class HomePage extends StatelessWidget {
         body: Center(
           child: CircleAvatar(
             child: Container(
-              height: 70,
-              width: 60,
+              height: 100,
+              width: 100,
               child: Column(
                 children: [
                   Container(
-                      height: 40,
-                      width: 40,
+                      height: 100,
+                      width: 100,
                       child: Image.asset("assets/images/boy.jpg")),
                   Text("Name"),
+                  Icon(Icons.email_rounded,)
                 ],
               ),
             ),
