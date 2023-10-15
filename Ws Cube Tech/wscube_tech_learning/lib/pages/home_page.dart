@@ -17,34 +17,22 @@ class HomePage extends StatelessWidget {
           backgroundColor: Colors.yellow[600],
         ),
         body: Center(
-          child: CircleAvatar(
-            child: Container(
-              height: 100,
-              width: 100,
-              child: Column(
-                children: [
-                  Container(
-                      height: 100,
-                      width: 100,
-                      child: Image.asset("assets/images/boy.jpg")),
-                  Text("Name"),
-                  InkWell(
-                    onDoubleTap: () {
-                      print("Tapped on email");
-                    },
-                    child: Icon(
-                      Icons.email_rounded,
-                      size: 50,
-                      color: Colors.redAccent,
-                      weight: 75,
+            child: Card(
+                surfaceTintColor: Colors.blueAccent,
+                shadowColor: Colors.amberAccent[400],
+                elevation: 20,
+                child: Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: Container(
+                    child: Text(
+                      "Shougot Mollik",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w400,
+                          fontStyle: FontStyle.italic,
+                          color: Colors.black54),
                     ),
-                  )
-                ],
-              ),
-            ),
-            backgroundColor: Colors.blueAccent,
-            radius: 50,
-          ),
-        ));
+                  ),
+                ))));
   }
 }
