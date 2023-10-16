@@ -10,7 +10,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  var UserInput = TextEditingController();
   var PasswordInput = TextEditingController();
   @override
   Widget build(BuildContext context) {
