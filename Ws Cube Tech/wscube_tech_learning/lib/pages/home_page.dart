@@ -15,34 +15,82 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.yellow[200],
-        appBar: AppBar(
-          title: Text("WsCube Tech Flutter Basics",
-              style: TextStyle(color: Colors.black54)),
-          centerTitle: true,
-          elevation: 0.0,
-          backgroundColor: Colors.yellow[600],
+      backgroundColor: Colors.yellow[200],
+      appBar: AppBar(
+        title: Text("WsCube Tech Flutter Basics",
+            style: TextStyle(color: Colors.black54)),
+        centerTitle: true,
+        elevation: 0.0,
+        backgroundColor: Colors.yellow[600],
+      ),
+      body: Container(
+        width: 200,
+        child: GridView.count(
+          crossAxisCount: 3,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                color: Colors.deepOrange,
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                color: Colors.deepPurple,
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                color: Colors.green,
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                color: Colors.pink,
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                color: Colors.blue,
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                color: Colors.cyan,
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                color: Colors.lime,
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                color: Colors.red,
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                color: Colors.black26,
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                color: Colors.white70,
+              ),
+            )
+          ],
         ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text("Select Date"),
-              ElevatedButton(
-                child: Text("Select"),
-                onPressed: () async {
-                  TimeOfDay? pickedTime = await showTimePicker(
-                      context: context,
-                      initialTime: TimeOfDay.now(),
-                      initialEntryMode: TimePickerEntryMode.dial);
-
-                  if (pickedTime != null) {
-                    print("${pickedTime.hour}:${pickedTime.minute}");
-                  }
-                },
-              )
-            ],
-          ),
-        ));
+      ),
+    );
   }
 }
