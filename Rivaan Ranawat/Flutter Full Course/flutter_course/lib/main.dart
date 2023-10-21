@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_course/pages/currency_convater_material_page.dart';
+import 'package:flutter_course/currency_convater_material_page.dart';
 
 void main() {
   runApp(const MyApp());
