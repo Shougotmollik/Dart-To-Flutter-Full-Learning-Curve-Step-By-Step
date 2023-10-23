@@ -6,6 +6,7 @@ class CurrencyConvaterMaterialPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
+      backgroundColor: Colors.amberAccent,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
