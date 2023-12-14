@@ -1,7 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:todo_applications/first_page.dart';
 import 'package:todo_applications/home_page.dart';
 import 'package:todo_applications/second_page.dart';
 import 'package:todo_applications/setting_page.dart';
