@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_full_course_new/currency_converter.dart';
 
-void main(List<String> args) {
+void main() {
   runApp(const MyApp());
 }
 
@@ -9,27 +10,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: Colors.orange[200],
-        appBar: AppBar(
-          backgroundColor: Colors.orange[400],
-          elevation: 0.0,
-          centerTitle: true,
-          title: const Text("Welcome To My Fist App"),
-        ),
-        body: Center(
-          child: Container(
-            height: 300,
-            width: 300,
-            decoration: BoxDecoration(
-              color: Colors.orange,
-              borderRadius: BorderRadius.circular(20),
-            ),
-          ),
-        ),
-      ),
+      home: CurencyConveterMaterial(),
     );
   }
 }
