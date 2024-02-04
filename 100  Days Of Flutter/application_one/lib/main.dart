@@ -10,9 +10,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(appBarTheme: AppBarTheme(color: Colors.indigoAccent)),
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(primarySwatch: Colors.purple),
       home: Scaffold(
+        backgroundColor: Colors.blueAccent,
         appBar: AppBar(
           title: const Text("Hello app Bar"),
           centerTitle: true,
@@ -20,7 +21,10 @@ class MyApp extends StatelessWidget {
         ),
         body: Center(
           child: Container(
-            child: const Text("This is Body"),
+            child: const Text(
+              "This is Body",
+              style: TextStyle(fontSize: 24),
+            ),
           ),
         ),
       ),
