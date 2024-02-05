@@ -1,48 +1,41 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(const SnackBarDemo());
+import 'package:typethis/typethis.dart';
 
-class SnackBarDemo extends StatelessWidget {
-  const SnackBarDemo({super.key});
+void main(List<String> args) {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'SnackBar Demo',
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('SnackBar Demo'),
-        ),
-        body: const SnackBarPage(),
-      ),
-    );
-  }
-}
-
-class SnackBarPage extends StatelessWidget {
-  const SnackBarPage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: ElevatedButton(
-        onPressed: () {
-          final snackBar = SnackBar(
-            content: const Text('Yay! A SnackBar!'),
-            //   action: SnackBarAction(
-            //     label: 'Undo',
-            //     onPressed: () {
-            //       // Some code to undo the change.
-            //     },
-            //   ),
-          );
-
-          // Find the ScaffoldMessenger in the widget tree
-          // and use it to show a SnackBar.
-          ScaffoldMessenger.of(context).showSnackBar(snackBar);
-        },
-        child: const Text('Show SnackBar'),
-      ),
+          appBar: AppBar(
+            title: const Text("App Bar"),
+            backgroundColor: Colors.amberAccent,
+            actions: [
+              IconButton(onPressed: () {}, icon: const Icon(Icons.phone))
+            ],
+          ),
+          body: const Center(
+            child: TypeThis(
+              string: 'Hello I Am Shougot Mollik',
+              style: TextStyle(fontSize: 20.0),
+              richTextMatchers: [
+                TypeThisMatcher(
+                  'Shougot Mollik',
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontStyle: FontStyle.italic,
+                      fontSize: 20.0),
+                ),
+              ],
+            ),
+          )),
     );
   }
 }
