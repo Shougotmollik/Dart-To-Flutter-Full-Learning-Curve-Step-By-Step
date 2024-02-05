@@ -168,6 +168,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.6.1"
+  typethis:
+    dependency: "direct main"
+    description:
+      name: typethis
+      sha256: b44c22357bebec925bebae574b91928a1fe192d285ff13d2447c1baf63009777
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0"
   vector_math:
     dependency: transitive
     description:
@@ -186,3 +194,4 @@ packages:
     version: "0.3.0"
 sdks:
   dart: ">=3.2.6 <4.0.0"
+  flutter: ">=1.17.0"
