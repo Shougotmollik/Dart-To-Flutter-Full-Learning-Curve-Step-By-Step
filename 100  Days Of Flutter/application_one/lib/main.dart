@@ -1,20 +1,20 @@
-import 'package:application_one/form.dart';
 import 'package:flutter/material.dart';
 
 void main(List<String> args) {
-  runApp(const MyApp());
+  runApp(const TabBarApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class TabBarApp extends StatelessWidget {
+  const TabBarApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      child: Container(
-        color: Colors.orange,
-        child: const MyFormApp(),
-      ),
-    );
+    return DefaultTabController(
+        length: 8,
+        child: Scaffold(
+          appBar: AppBar(
+            title: const Text("Hello"),
+          ),
+        ));
   }
 }
