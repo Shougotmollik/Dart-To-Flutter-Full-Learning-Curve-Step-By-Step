@@ -1,41 +1,106 @@
 import 'package:flutter/material.dart';
 
-import 'package:typethis/typethis.dart';
-
-void main(List<String> args) {
+void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  int myIndex = 0;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-          appBar: AppBar(
-            title: const Text("App Bar"),
-            backgroundColor: Colors.amberAccent,
-            actions: [
-              IconButton(onPressed: () {}, icon: const Icon(Icons.phone))
+        backgroundColor: Colors.lime[200],
+        appBar: AppBar(
+          title: const Text('Meassge'),
+          backgroundColor: Colors.lime,
+          actions: [
+            IconButton(onPressed: () {}, icon: const Icon(Icons.search)),
+            IconButton(onPressed: () {}, icon: const Icon(Icons.phone))
+          ],
+        ),
+        drawer: Drawer(
+          backgroundColor: Colors.lime[200],
+          child: ListView(
+            children: const [
+              DrawerHeader(
+                padding: EdgeInsets.all(0),
+                child: UserAccountsDrawerHeader(
+                    accountName: Text("Shougot"),
+                    accountEmail: Text("Shougot@info.abc")),
+              ),
+              ListTile(
+                leading: Icon(Icons.home),
+                title: Text("Home"),
+              ),
+              ListTile(
+                leading: Icon(Icons.person),
+                title: Text("Profile"),
+              ),
+              ListTile(
+                leading: Icon(Icons.mail),
+                title: Text("Email"),
+              ),
+              ListTile(
+                leading: Icon(Icons.phone),
+                title: Text("Phone"),
+              ),
+              ListTile(
+                leading: Icon(Icons.account_balance),
+                title: Text("Balance"),
+              ),
+              ListTile(
+                leading: Icon(Icons.admin_panel_settings),
+              )
             ],
           ),
-          body: const Center(
-            child: TypeThis(
-              string: 'Hello I Am Shougot Mollik',
-              style: TextStyle(fontSize: 20.0),
-              richTextMatchers: [
-                TypeThisMatcher(
-                  'Shougot Mollik',
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontStyle: FontStyle.italic,
-                      fontSize: 20.0),
-                ),
-              ],
+        ),
+        floatingActionButton: FloatingActionButton(
+            backgroundColor: Colors.lime[400],
+            onPressed: () {},
+            child: const Icon(Icons.add)),
+        bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: Colors.lime,
+          items: const [
+            BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.library_books), label: "List"),
+            BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
+          ],
+          currentIndex: myIndex,
+          onTap: (index) {
+            setState(() {
+              myIndex = index;
+            });
+          },
+        ),
+        body: Container(
+          height: 75,
+          width: 400,
+          margin: const EdgeInsets.all(50),
+          padding: const EdgeInsets.all(50),
+          alignment: Alignment.topCenter,
+          decoration: BoxDecoration(
+            color: Colors.orangeAccent,
+            borderRadius: BorderRadius.circular(20),
+            border: const Border(
+              left: BorderSide(
+                color: Colors.green,
+                width: 100,
+              ),
             ),
-          )),
+          ),
+          child: const Text("Container"),
+        ),
+      ),
     );
   }
 }
