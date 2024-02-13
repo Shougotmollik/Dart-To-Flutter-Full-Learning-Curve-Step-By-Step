@@ -18,5 +18,5 @@ Map count(String message) {
 }
 
 void main() {
-  encode('bananas are tasty');
+  encode('i am shougot');
 }
