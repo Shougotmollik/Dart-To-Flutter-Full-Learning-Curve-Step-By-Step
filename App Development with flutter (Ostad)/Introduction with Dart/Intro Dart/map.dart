@@ -5,4 +5,8 @@ void main(List<String> args) {
   };
   studentList[2] = "is";
   print(studentList);
+
+  bool name = true;
+  String a = 'ami';
+  String b = 'tumi';
 }
