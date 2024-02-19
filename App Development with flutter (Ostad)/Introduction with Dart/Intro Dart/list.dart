@@ -1,3 +1,9 @@
 void main(List<String> args) {
-  List<String> StudentList = [];
+  List<int> number = [
+    1,
+    2,
+    4,
+  ];
+  number[2] = 3;
+  print(number);
 }
