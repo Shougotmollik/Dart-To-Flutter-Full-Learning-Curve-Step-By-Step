@@ -1,7 +1,9 @@
 void main(List<String> args) {
-  welcomeMessage('shougot');
+  // call the function
+  welcomeMessage('shougot', 'Khulna', 22);
 }
 
-welcomeMessage(String name) {
-  print('Hello $name');
+welcomeMessage(String name, String address, int age) {
+  // function body
+  print('Hello $name $address $age');
 }
