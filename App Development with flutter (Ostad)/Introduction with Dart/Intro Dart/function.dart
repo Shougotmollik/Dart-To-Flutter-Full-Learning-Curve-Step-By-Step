@@ -2,7 +2,7 @@ void main(List<String> args) {
   // call the function
   // welcomeMessage('shougot', 'Khulna', 22);
   // myFunc(10, 20);
-  recursionFunc();
+  // recursionFunc();
 }
 
 welcomeMessage(String name, [String address = '', int age = 0]) {
@@ -20,4 +20,8 @@ int myFunc(int a, int b) {
 recursionFunc() {
   print('This is recusion example');
   recursionFunc();
+}
+
+void testFunc({required String name ,int? num}){
+  
 }
