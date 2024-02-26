@@ -1,11 +1,34 @@
 void main() {
-  var MyClassObj = new student();
-  print(MyClassObj.name);
+  List<Student> studentList = [];
+
+  // Create Student Object
+  Student studentOne = Student();
+  studentOne.name = 'shougot';
+  studentOne.address = 'Magura';
+  studentOne.age = 21;
+  studentOne.department = 'Cse';
+  studentList.add(studentOne);
+
+  // Create Teacher Objects
+
+  Teacher teacherOne = Teacher('Rafat', 'Dhaka', 40);
+  print(teacherOne.name);
 }
 
-class student {
-  String name = 'shougot';
-  String address = 'Khulna';
-  int age = 21;
-  String department = 'CSE';
+// Student Class
+class Student {
+  String name = '';
+  String address = '';
+  int age = 0;
+  String department = '';
+}
+
+// Teacher Class
+class Teacher {
+  String Address;
+  String name;
+  int age;
+
+  // Teacher Contructor
+  Teacher(this.name, this.Address, this.age);
 }
