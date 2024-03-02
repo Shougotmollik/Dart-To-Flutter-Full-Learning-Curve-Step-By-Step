@@ -11,6 +11,6 @@ class human {
 
 class personA extends human {
   void dinner() {
-    print('Chikhen');
+    print('Egg');
   }
 }
