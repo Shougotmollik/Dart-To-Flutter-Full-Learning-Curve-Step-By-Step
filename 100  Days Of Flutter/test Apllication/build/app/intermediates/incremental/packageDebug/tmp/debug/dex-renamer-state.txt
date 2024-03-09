@@ -1,0 +1,4 @@
+#Sun Mar 03 23:27:14 BDT 2024
+base.0=/home/shell/MySpace/Code/Dart_To_Flutter_Full_AppDevelopment_Learning_Curve/100  Days Of Flutter/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
