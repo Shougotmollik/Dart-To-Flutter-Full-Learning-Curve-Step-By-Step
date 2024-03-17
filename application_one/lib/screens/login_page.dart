@@ -1,7 +1,6 @@
-import 'dart:ui';
-
 import 'package:application_one/screens/home_page.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:application_one/screens/signup_page.dart';
+
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -78,10 +77,6 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
               ),
-            ),
-            const InkWell(
-              child: Text('SingUp'),
-              onLongPress: ,
             ),
           ],
         ),
