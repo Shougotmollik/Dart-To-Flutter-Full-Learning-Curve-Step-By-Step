@@ -78,6 +78,24 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
             ),
+            const SizedBox(
+              height: 16,
+            ),
+            TextButton(
+              style: TextButton.styleFrom(
+                textStyle: const TextStyle(
+                  fontSize: 22.0,
+                ),
+              ),
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const SignupPage(),
+                    ));
+              },
+              child: const Text('Sign Up'),
+            ),
           ],
         ),
       ),
