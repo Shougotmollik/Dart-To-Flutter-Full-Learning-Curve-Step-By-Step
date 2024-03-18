@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+import 'package:flutter/rendering.dart';
 
 class SignupPage extends StatelessWidget {
   const SignupPage({super.key});
@@ -45,6 +46,18 @@ class SignupPage extends StatelessWidget {
             ),
             TextField(
               decoration: InputDecoration(
+                  labelText: "Enter Your Email",
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(16),
+                    ),
+                  )),
+            ),
+            SizedBox(
+              height: 8.0,
+            ),
+            TextField(
+              decoration: InputDecoration(
                 labelText: "Enter Password",
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.all(
@@ -55,6 +68,15 @@ class SignupPage extends StatelessWidget {
             ),
             SizedBox(
               height: 8.0,
+            ),
+            TextField(
+              decoration: InputDecoration(
+                  labelText: "Enter Confirm Password",
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(16),
+                    ),
+                  )),
             ),
           ],
         ),
