@@ -1,3 +1,4 @@
+import 'package:application_one/screens/follower_page.dart';
 import 'package:application_one/screens/login_page.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(primarySwatch: Colors.deepOrange),
-        home: const LoginPage(),
+        home: const FollowerPage(),
       ),
     );
   }
