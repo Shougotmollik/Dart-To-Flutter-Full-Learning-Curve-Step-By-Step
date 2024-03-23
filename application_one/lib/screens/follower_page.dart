@@ -45,6 +45,7 @@ class _FollowerPageState extends State<FollowerPage> {
             icon: const Icon(Icons.add),
             label: const Text("Follow"),
           ),
+          ElevatedButton(onPressed: () {}, child: const Text("Elavated Button"))
         ],
       ),
     );
