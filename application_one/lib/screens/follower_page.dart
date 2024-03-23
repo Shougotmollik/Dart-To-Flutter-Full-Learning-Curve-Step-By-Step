@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 
 class FollowerPage extends StatefulWidget {
@@ -45,7 +43,7 @@ class _FollowerPageState extends State<FollowerPage> {
             icon: const Icon(Icons.add),
             label: const Text("Follow"),
           ),
-          ElevatedButton(onPressed: () {}, child: const Text("Elavated Button"))
+          ElevatedButton(onPressed: () {}, child: const Text("Elevated Button"))
         ],
       ),
     );
