@@ -47,7 +47,10 @@ class _FollowerPageState extends State<FollowerPage> {
             onPressed: () {},
             child: const Text("Elevated Button"),
           ),
-          TextButton(onPressed: (){}, child: Text("Text Button"),),
+          TextButton(
+            onPressed: () {},
+            child: const Text("Text Button"),
+          ),
         ],
       ),
     );
