@@ -1,5 +1,6 @@
-import 'package:application_one/screens/contact_page.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -7,90 +8,117 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Home Page"),
-        backgroundColor: Colors.deepOrange,
-        actions: [
-          IconButton(
-            onPressed: () {
-              ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(
-                  content: Text("You wanna add a number"),
+      appBar: appBar(),
+      body: Column(
+        children: [
+          Container(
+            margin: const EdgeInsets.only(
+              top: 40,
+              left: 20,
+              right: 20,
+            ),
+            decoration: BoxDecoration(
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.11),
+                  blurRadius: 40,
+                  spreadRadius: 0.0,
                 ),
-              );
-            },
-            icon: const Icon(Icons.add),
-          )
-        ],
-      ),
-      drawer: const Drawer(
-        child: Column(
-          children: [
-            UserAccountsDrawerHeader(
-              accountEmail: Text("abc@gmail.com"),
-              accountName: Text("Abc"),
-              decoration: BoxDecoration(
-                color: Colors.deepPurple,
+              ],
+            ),
+            child: TextField(
+              decoration: InputDecoration(
+                filled: true,
+                fillColor: Colors.white,
+                hintText: "Search pancake",
+                hintStyle: const TextStyle(
+                  color: Color(0xffDDDADA),
+                  fontSize: 14,
+                ),
+                contentPadding: const EdgeInsets.all(15),
+                border: UnderlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  borderSide: BorderSide.none,
+                ),
+                prefixIcon: Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: SvgPicture.asset("assets/icons/Search.svg"),
+                ),
+                suffixIcon: SizedBox(
+                  width: 100,
+                  child: IntrinsicHeight(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        const VerticalDivider(
+                          indent: 10,
+                          endIndent: 10,
+                          color: Colors.black,
+                          thickness: 0.1,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: SvgPicture.asset("assets/icons/Filter.svg"),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
               ),
             ),
-            ListTile(
-              title: Text('Profile'),
-              leading: Icon(Icons.person),
-            ),
-          ],
-        ),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.deepPurpleAccent,
-        unselectedItemColor: Colors.black54,
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
+          ),
         ],
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          showDialog(
-            context: context,
-            builder: (context) {
-              return AlertDialog(
-                title: const Text("Alert Content"),
-                content: const SingleChildScrollView(
-                  child: ListBody(
-                    children: [
-                      Text('You wanna add'),
-                      Text('Content in Your PhoneBook'),
-                    ],
-                  ),
-                ),
-                actions: [
-                  TextButton(
-                    onPressed: () {
-                      Navigator.pop(context, 'Decline');
-                    },
-                    child: const Text("Decline"),
-                  ),
-                  TextButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const ContactPage(),
-                        ),
-                      );
-                    },
-                    child: const Text('Approve'),
-                  ),
-                ],
-              );
-            },
-          );
-        },
-        backgroundColor: Colors.deepPurpleAccent[100],
-        hoverColor: Colors.deepPurple,
-        child: const Icon(Icons.add),
+    );
+  }
+
+  AppBar appBar() {
+    return AppBar(
+      centerTitle: true,
+      backgroundColor: Colors.white,
+      title: const Text(
+        "Breakfast",
+        style: TextStyle(
+          color: Colors.black,
+          fontSize: 18,
+          fontWeight: FontWeight.bold,
+        ),
       ),
+      leading: GestureDetector(
+        onTap: () {},
+        child: Container(
+          alignment: Alignment.center,
+          margin: const EdgeInsets.all(10),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: SvgPicture.asset(
+            'assets/icons/Arrow - Left 2.svg',
+            height: 25,
+            width: 25,
+          ),
+        ),
+      ),
+      actions: [
+        GestureDetector(
+          onTap: () {},
+          child: Container(
+            margin: const EdgeInsets.all(10),
+            alignment: Alignment.center,
+            width: 37,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: SvgPicture.asset(
+              "assets/icons/dots.svg",
+              height: 8.0,
+              width: 8.0,
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
