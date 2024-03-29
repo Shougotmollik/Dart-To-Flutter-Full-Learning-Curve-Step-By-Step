@@ -1,6 +1,7 @@
 import 'package:application_one/screens/follower_page.dart';
 import 'package:application_one/screens/home_page.dart';
 import 'package:application_one/screens/login_page.dart';
+import 'package:application_one/screens/module7_practice.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(fontFamily: "Poppins"),
-        home: const HomePage(),
+        home: const DisplayScreen(),
       ),
     );
   }
