@@ -30,7 +30,6 @@ class IamRich extends StatelessWidget {
               height: 300,
               child: Image.network(
                 "https://lh3.googleusercontent.com/2Co64Pp5uRnILJNyixKvdjVmASCt9HRhFlfWbKgxqs-r-LUdNLbFT6zwtMR2lgE9VomD",
-                width: 400,
               ),
             ),
           ),
