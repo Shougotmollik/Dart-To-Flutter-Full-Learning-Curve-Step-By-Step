@@ -1,58 +1,44 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatefulWidget {
+class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-var hello = "Hello";
-
-class _HomePageState extends State<HomePage> {
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        title: const Text("Welcome to practice"),
-      ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Center(
-            child: Container(
-              height: 300,
-              width: 300,
-              decoration: BoxDecoration(
-                color: Colors.blue.shade500,
-                borderRadius: BorderRadius.circular(20),
-              ),
-              child: Center(
-                  child: Text(
-                hello,
-                style: const TextStyle(
-                    fontSize: 56,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black),
-              )),
-            ),
+        backgroundColor: Colors.white,
+        title: const Text(
+          "WhatsApp",
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 28,
+            color: Colors.green,
           ),
-          ElevatedButton.icon(
-            onPressed: () {
-              setState(() {
-                hello = " Hahaha";
-              });
-            },
-            icon: const Icon(Icons.change_circle_outlined),
-            label: const Text("Click To Change"),
-            style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blue.shade300,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
-                )),
-          )
+        ),
+        elevation: 1,
+        scrolledUnderElevation: 1,
+        actions: [
+          IconButton(
+              onPressed: () {}, icon: const Icon(Icons.camera_alt_outlined)),
+          IconButton(onPressed: () {}, icon: const Icon(Icons.search)),
+          IconButton(onPressed: () {}, icon: const Icon(Icons.menu_sharp))
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: Colors.green,
+        child: const Icon(
+          Icons.add_comment_rounded,
+          color: Colors.white,
+        ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(items: const [
+        BottomNavigationBarItem(icon: Icon(Icons.chat_rounded), label: "Chats"),
+        BottomNavigationBarItem(icon: Icon(Icons.chat_rounded), label: "Chats"),
+        BottomNavigationBarItem(icon: Icon(Icons.chat_rounded), label: "Chats"),
+      ]),
     );
   }
 }
