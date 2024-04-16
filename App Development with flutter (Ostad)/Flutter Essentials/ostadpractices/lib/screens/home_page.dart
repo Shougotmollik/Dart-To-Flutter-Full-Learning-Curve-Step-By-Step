@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iconsax/iconsax.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -34,11 +35,15 @@ class HomePage extends StatelessWidget {
           color: Colors.white,
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(items: const [
-        BottomNavigationBarItem(icon: Icon(Icons.chat_rounded), label: "Chats"),
-        BottomNavigationBarItem(icon: Icon(Icons.chat_rounded), label: "Chats"),
-        BottomNavigationBarItem(icon: Icon(Icons.chat_rounded), label: "Chats"),
-      ]),
+      bottomNavigationBar: NavigationBar(
+        destinations: const [
+          NavigationDestination(icon: Icon(Iconsax.home), label: "Home"),
+          NavigationDestination(
+              icon: Icon(Icons.shopping_basket), label: "Shop"),
+          NavigationDestination(icon: Icon(Icons.favorite), label: "Wishlist"),
+          NavigationDestination(icon: Icon(Icons.person), label: "Profile"),
+        ],
+      ),
     );
   }
 }
