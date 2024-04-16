@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:ostadpractices/screens/home_page.dart';
-import 'package:ostadpractices/screens/onboarding_screen.dart';
 
 void main() {
   runApp(const MyApp());
