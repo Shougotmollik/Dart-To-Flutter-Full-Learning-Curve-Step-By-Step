@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: "practice App",
       themeMode: ThemeMode.system,
       theme: ThemeData(
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.blue.shade200,
         ),
       ),
-      home: const OnBoardingScreen(),
+      home: const HomePage(),
     );
   }
 }
