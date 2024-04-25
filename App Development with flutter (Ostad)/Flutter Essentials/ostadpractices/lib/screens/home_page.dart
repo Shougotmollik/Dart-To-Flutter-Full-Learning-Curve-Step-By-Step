@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -37,7 +36,7 @@ class HomePage extends StatelessWidget {
       ),
       bottomNavigationBar: NavigationBar(
         destinations: const [
-          NavigationDestination(icon: Icon(Iconsax.home), label: "Home"),
+          NavigationDestination(icon: Icon(Icons.home), label: "Home"),
           NavigationDestination(
               icon: Icon(Icons.shopping_basket), label: "Shop"),
           NavigationDestination(icon: Icon(Icons.favorite), label: "Wishlist"),
