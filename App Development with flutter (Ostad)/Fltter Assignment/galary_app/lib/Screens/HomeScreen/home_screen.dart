@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gallery_app/Models/images_model.dart';
+import 'package:gallery_app/Models/data_model.dart';
 import 'package:gallery_app/Screens/Detailscreen/details_screen.dart';
 import 'package:gallery_app/Widgets/custom_appbar.dart';
 
@@ -15,9 +15,11 @@ class _HomePageState extends State<HomePage> {
   final List<AppData> getAppData = List.generate(
     appData.length,
     (index) => AppData(
-        images: appData[index].images,
-        label: appData[index].label,
-        description: appData[index].description),
+      images: appData[index].images,
+      label: appData[index].label,
+      description: appData[index].description,
+      bodyTitle: appData[index].bodyTitle,
+    ),
   );
   @override
   Widget build(BuildContext context) {
@@ -56,8 +58,8 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     Positioned(
-                      top: 120,
-                      left: 45,
+                      top: 140,
+                      left: 35,
                       child: Text(
                         getAppData[index].label,
                         style: const TextStyle(
