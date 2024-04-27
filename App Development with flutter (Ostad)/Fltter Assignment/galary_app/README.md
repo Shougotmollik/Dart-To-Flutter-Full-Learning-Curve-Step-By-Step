@@ -1,16 +1,10 @@
-# galary_app
+# Project Name :- Gallery App
 
-A new Flutter project.
+Cross Platform App Build with Flutter.
 
-## Getting Started
+## ScreenShot
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# HomeScreen
+![Screenshot_20240428_011918.png](Screenshot_20240428_011918.png)
+# Details Page
+![Screenshot_20240428_012001.png](Screenshot_20240428_012001.png)
