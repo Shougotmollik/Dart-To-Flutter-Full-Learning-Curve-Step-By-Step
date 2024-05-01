@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ostadpractices/screens/home_page.dart';
+import 'package:ostadpractices/screens/splash_screen/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.blue.shade200,
         ),
       ),
-      home: const HomePage(),
+      home: const SplashScreen(),
     );
   }
 }
