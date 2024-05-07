@@ -38,10 +38,33 @@ class HomePage extends StatelessWidget {
         destinations: const [
           NavigationDestination(icon: Icon(Icons.home), label: "Home"),
           NavigationDestination(
-              icon: Icon(Icons.shopping_basket), label: "Shop"),
-          NavigationDestination(icon: Icon(Icons.favorite), label: "Wishlist"),
-          NavigationDestination(icon: Icon(Icons.person), label: "Profile"),
+              icon: Icon(Icons.broadcast_on_personal), label: "Updates"),
+          NavigationDestination(
+              icon: Icon(Icons.people_outlined), label: "Communities"),
+          NavigationDestination(icon: Icon(Icons.phone), label: "Calls"),
         ],
+      ),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(
+          vertical: 8,
+          horizontal: 18,
+        ),
+        child: Column(
+          children: [
+            Row(
+              children: [
+                Container(
+                  padding: const EdgeInsets.all(12),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(25),
+                    color: Colors.green.shade100,
+                  ),
+                  child: Text("All"),
+                ),
+              ],
+            )
+          ],
+        ),
       ),
     );
   }
