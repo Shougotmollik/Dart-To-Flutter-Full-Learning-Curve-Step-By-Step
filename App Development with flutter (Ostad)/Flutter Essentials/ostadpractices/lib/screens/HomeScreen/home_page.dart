@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ostadpractices/screens/HomeScreen/whatsapp_tab_bar.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -44,8 +45,8 @@ class HomePage extends StatelessWidget {
           NavigationDestination(icon: Icon(Icons.phone), label: "Calls"),
         ],
       ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(
+      body: const Padding(
+        padding: EdgeInsets.symmetric(
           vertical: 8,
           horizontal: 18,
         ),
@@ -53,14 +54,9 @@ class HomePage extends StatelessWidget {
           children: [
             Row(
               children: [
-                Container(
-                  padding: const EdgeInsets.all(8),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    color: Colors.green.shade100,
-                  ),
-                  child: const Text("Unread"),
-                ),
+                WhatsappTabBar(btnText: "All"),
+                WhatsappTabBar(btnText: "Read"),
+                WhatsappTabBar(btnText: "Unread"),
               ],
             )
           ],
