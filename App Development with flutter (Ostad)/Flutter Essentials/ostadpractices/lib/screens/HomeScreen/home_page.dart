@@ -54,12 +54,12 @@ class HomePage extends StatelessWidget {
             Row(
               children: [
                 Container(
-                  padding: const EdgeInsets.all(12),
+                  padding: const EdgeInsets.all(8),
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(25),
+                    borderRadius: BorderRadius.circular(15),
                     color: Colors.green.shade100,
                   ),
-                  child: Text("All"),
+                  child: const Text("Unread"),
                 ),
               ],
             )
