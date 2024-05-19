@@ -1,5 +1,10 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:galary_app_api/Screens/DetailsScreen/details_screen.dart';
+import 'package:http/http.dart' as http;
+
+import '../../Model/model.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -9,6 +14,14 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  List<Product> product = [];
+
+  @override
+  void initState() {
+    super.initState();
+    fetchProduct();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,7 +42,7 @@ class _HomeScreenState extends State<HomeScreen> {
             Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => const DetailsScreen(),
+                  builder: (context) =>  DetailsScreen(product),
                 ));
           },
           child: ListView.separated(
@@ -42,14 +55,16 @@ class _HomeScreenState extends State<HomeScreen> {
                         height: 80,
                         width: 80,
                         decoration: BoxDecoration(
-                            color: Colors.red,
-                            borderRadius: BorderRadius.circular(15)),
+                            
+                            borderRadius: BorderRadius.circular(15),
+                            image: DecorationImage(image: NetworkImage(product[index].thumbnailUrl))
+                            ),
                       ),
                       const SizedBox(width: 10),
-                      const Flexible(
+                       Flexible(
                         child: Text(
-                          'This is about title of the images and short idea what is it',
-                          style: TextStyle(
+                          product[index].title,
+                          style: const TextStyle(
                             fontWeight: FontWeight.w400,
                             fontSize: 16,
                           ),
@@ -61,10 +76,22 @@ class _HomeScreenState extends State<HomeScreen> {
               );
             },
             separatorBuilder: (context, index) => const SizedBox(height: 10),
-            itemCount: 5,
+            itemCount: product.length,
           ),
         ),
       ),
     );
+  }
+
+  Future<void> fetchProduct() async {
+    const String uri = "https://jsonplaceholder.typicode.com/photos";
+
+    final response = await http.get(Uri.parse(uri));
+
+    if (response.statusCode == 200) {
+      final List<dynamic> jsonData = json.decode(response.body);
+      setState(() {});
+      product = jsonData.map((data) => Product.fromJson(data)).toList();
+    } else {}
   }
 }
