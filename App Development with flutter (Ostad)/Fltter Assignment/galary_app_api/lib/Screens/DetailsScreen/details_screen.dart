@@ -47,15 +47,15 @@ class DetailsScreen extends StatelessWidget {
             Column(
               children: [
                 Text(
-                  "",
-                  style: TextStyle(
+                  "${Product[index].title}",
+                  style: const TextStyle(
                     fontWeight: FontWeight.w400,
                     fontSize: 14,
                   ),
                 ),
-                Text(
-                  "ID: ",
-                  style: TextStyle(
+                const Text(
+                  "ID: ${product[index].id}",
+                  style: const TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.w400,
                   ),
